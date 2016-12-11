@@ -7,9 +7,10 @@ GPIO.setmode(GPIO.BOARD)
 GPIO.setup(8, GPIO.IN)
 
 if GPIO.input(8):
-    print 'Open'
+    return 'Open'
 else:
-    print 'Closed'
+    return 'Closed'
+ 
 time.sleep(1)
 
 GPIO.cleanup()

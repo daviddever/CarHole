@@ -13,10 +13,15 @@ Site is currently flagged for malware, link goes to [Internet Archive](https://a
 1. Wire up the Raspberry Pi with the guide above
 2. sudo apt-get install python-pip
 3. sudo pip install flask
-4. export FLASK_APP=carhole.py
-5. flask run --host=0.0.0.0
+4. Copy SSL cert and key to directory or generate a self-signed one: openssl req -x509 -newkey rsa:4096 -keyout carholekey.pem -out carholecert.pem -days 3650 -nodes
+5. sudo python carhole.py
 
-A GET request to http://_YourPi'sAddress_:5000/operate will open the door.
+The server runs on https on port 443
+
+A GET request to /operate will open the door.
+A GET request to /check_door will return Open or Closed
+
+
 **This is not secure at all!**
 
 ###checkdoor.py
