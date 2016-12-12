@@ -14,16 +14,31 @@ Site is currently flagged for malware, link goes to [Internet Archive](https://a
 2. sudo apt-get install python-pip
 3. sudo pip install flask
 4. Copy SSL cert and key to directory or generate a self-signed one: openssl req -x509 -newkey rsa:4096 -keyout carholekey.pem -out carholecert.pem -days 3650 -nodes
-5. sudo python carhole.py
+5. Edit `config-example` and save as `config.py`
+6. sudo python carhole.py
 
 The server runs on https on port 443
 
-A GET request to /operate will open the door.
-A GET request to /check_door will return Open or Closed
+There is a secret key configured in `config.py` that must be included with each request or the request will return a `Invalid Key` error.
 
+A `POST` request to `/operate` will open the door.
 
-**This is not secure at all!**
+A `POST` request to `/checkdoor` will return Open or Closed
+
+**Security Warning!**
+```While this script makes efforts to operate securely, nothing is perfect and new vulnerabilites are discovered all the time, be sure to evaluate and mitigate the potential risks by blocking all, or limiting to only port 443, exposure to the Internet and apply updates to keep all components as new fixes are released.
+```
+
+Example of a Python script to check door status
+```python
+import requests
+
+r = requests.post('https://EXAMPLE ADDRESS/checkdoor', data={'key':'EXAMPLE KEY'}, verify='EXAMPLE CERTFILE')
+
+print r.text
+```
+
 
 ###checkdoor.py
-Short script to check state of door, returns Open or Closed
+Short stand alone script to check state of door, returns Open or Closed
 

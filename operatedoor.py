@@ -1,24 +1,24 @@
 import RPi.GPIO as GPIO
 import time
 
-def operate():
+def operate(pin):
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(40, GPIO.OUT)
 
     # Operate door
-    GPIO.output(40, True)
+    GPIO.output(pin, True)
     time.sleep(1)
-    GPIO.output(40, False)
+    GPIO.output(pin, False)
     time.sleep(1)
 
     # Clear state
     GPIO.cleanup()
 
-def check_door():
+def check_door(pin):
     GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(8, GPIO.IN)
+    GPIO.setup(pin, GPIO.IN)
      
-    if GPIO.input(8):
+    if GPIO.input(pin):
         return 'Open'
     else:
         return 'Closed'

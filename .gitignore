@@ -95,3 +95,6 @@ ENV/
 
 #certs
 *.pem
+
+# config file
+config.py
