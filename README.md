@@ -1,6 +1,6 @@
 # CarHole
 
-~~Set of scripts~~ Microservice for controlling my garage door through a raspberry pi
+~~Set of scripts~~ Microservice for caontrolling my garage door from a Raspberry Pi
 
 ![alt text](https://frinkiac.com/meme/S06E23/1075707.jpg?b64lines=IEhFWSwgRkVMTEFTLCBUSEUgR0FSQUdFLgogT09ILCBMQS1ESS1EQSwgTVIuIEZSRU5DSAogTUFOLiAKCgoKCgpXSEFUIERPIFlPVSBDQUxMIElUPwoKCiBBIENBUiBIT0xFLg== "A counterfit jeans ring operating out of my carhole!")
 
@@ -26,10 +26,12 @@ A `POST` request to `/operate` will open the door.
 A `POST` request to `/checkdoor` will return Open or Closed
 
 **Security Warning!**
-```While this script makes efforts to operate securely, nothing is perfect and new vulnerabilites are discovered all the time, be sure to evaluate and mitigate the potential risks by blocking all, or limiting to only port 443, exposure to the Internet and apply updates to keep all components as new fixes are released.
-```
+
+While this script makes efforts to operate securely, nothing is perfect and new vulnerabilites are discovered all the time, be sure to evaluate and mitigate the potential risks by blocking all, or limiting to only port 443, exposure to the Internet and apply updates to keep all components as new fixes are released.
+
 
 Example of a Python script to check door status
+
 ```python
 import requests
 
@@ -41,4 +43,3 @@ print r.text
 
 ###checkdoor.py
 Short stand alone script to check state of door, returns Open or Closed
-
