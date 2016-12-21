@@ -48,5 +48,5 @@ Checks state of door, returns `Open` or `Closed`
 ###useedoor.py
 Operates the door
 
-###task.xml
+###tasker.xml
 Task to import into Tasker to operate the door
