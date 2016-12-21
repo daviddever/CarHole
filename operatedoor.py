@@ -3,7 +3,7 @@ import time
 
 def operate(pin):
     GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(40, GPIO.OUT)
+    GPIO.setup(pin, GPIO.OUT)
 
     # Operate door
     GPIO.output(pin, True)

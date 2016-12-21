@@ -1,0 +1,24 @@
+<TaskerData sr="" dvi="1" tv="4.9m">
+  <Task sr="task12">
+    <cdate>1482281180070</cdate>
+    <edate>1482290968271</edate>
+    <id>12</id>
+    <nme>Operate_door</nme>
+    <pri>7</pri>
+    <Action sr="act0" ve="7">
+      <code>116</code>
+        <Str sr="arg0" ve="3">https://YOUR URL</Str>
+        <Str sr="arg1" ve="3">operate</Str>
+        <Str sr="arg2" ve="3">key=YOUR KEY</Str>
+        <Str sr="arg3" ve="3"/>
+        <Str sr="arg4" ve="3"/>
+        <Int sr="arg5" val="10"/>
+        <Str sr="arg6" ve="3">application/x-www-form-urlencoded</Str>
+        <Str sr="arg7" ve="3"/>
+        <Int sr="arg8" val="1"/>
+     </Action>
+    <Img sr="icn" ve="2">
+      <nme>hd_device_access_accounts</nme>
+    </Img>
+  </Task>
+</TaskerData>
