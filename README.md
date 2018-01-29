@@ -8,7 +8,7 @@ Wiring instructions from [Idiot’s Guide to a Raspberry Pi Garage Door Opener b
 
 Site is currently flagged for malware, link goes to [Internet Archive](https://archive.org/web/) cache.
 
-##Installation
+## Installation
 
 1. Wire up the Raspberry Pi with the guide above
 2. sudo apt-get install python-pip
@@ -39,14 +39,18 @@ r = requests.post('https://YOUR ADDRESS/checkdoor', data={'key':'YOUR KEY'}, ver
 
 print r.text
 ```
-##Stand Alone Scripts
+
+## Using with [Home Assistant](https://home-assistant.io/)
+Example script and configuration.yaml files for using in conjunction with Home Assistant are included in ./homeassistant
+
+## Stand Alone Scripts
 These scripts can be run from the shell independently of carhole.py
 
-###checkdoor.py
+### checkdoor.py
 Checks state of door, returns `Open` or `Closed`
 
-###useedoor.py
+### useedoor.py
 Operates the door
 
-###tasker.xml
+### tasker.xml
 Task to import into Tasker to operate the door

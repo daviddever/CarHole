@@ -1,0 +1,19 @@
+# Example configuration for using cover comand to operate Carhole through Home
+# Assistant
+# Add this to your configuration.yaml
+# Paths below need to point to location on your system for garage.py
+
+cover:
+  - platform: command_line
+    covers:
+      garage_door:
+        command_open: /home/YOUR USER/garage.py open
+        command_close: /home/YOUR USER/garage.py close
+        command_stop: /home/YOUR USER/garage.py status
+        command_state: /home/YOUR USER/garage.py status
+        value_template: >
+          {% if value == 'Open' %}
+          100
+          {% elif value == 'Closed' %}
+          0
+          {% endif %}
