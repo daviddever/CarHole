@@ -1,0 +1,19 @@
+# Fill in values below
+
+values = dict(
+    # Wireless SSID
+    ssid = '',
+    # Wireless Key
+    wireless_key = '',
+    # Key File for SSL
+    ssl_key = '',
+    # Cert File for SSL
+    ssl_cert = '',
+    # Raspbery Pi pin connected to garage door opener
+    opener_pin = 40,
+    # Raspbery Pi pin connected magnetic switch
+    magnet_pin = 8,
+    # Secret Key that needs to be sent with every request for security,
+    # should be at least 15 characters
+    door_key = ''
+)
